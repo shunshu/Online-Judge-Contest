@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 
-long long int func(int n, int* str)
+long long int func(int n, int* str)// n denotes the order, str denotes the n x n matrix
 {
     if (n == 1)
     {
@@ -24,7 +24,7 @@ long long int func(int n, int* str)
         for(i= 0;i< n;i++)
         {
             int* ptr = (int*)malloc(sizeof(int)* (n- 1)* (n- 1)); // arrange the factors in the minor to the consecutive memory for N x N matrix to easily calculate
-            int j, k, l= 0;
+            int j, k, l= 0; // variables in loop
             for(j= 1;j< n;j++)
             {
                 for(k= 0;k< n;k++)
@@ -56,9 +56,9 @@ int main()
     int* s;
     int i, j;
     long long ans;
-    scanf("%d", &n);
+    scanf("%d", &n); //input: the order
     s = (int*) malloc(sizeof(int)* n* n);
-    for(i= 0;i< n;i++)
+    for(i= 0;i< n;i++) // input: scan all factors in n x n matrix
     {
         for(j= 0;j< n;j++)
         {
